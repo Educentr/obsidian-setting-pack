@@ -50,36 +50,6 @@
       "type": "Macro",
       "command": false,
       "macroId": "d6553cdb-9378-4c06-8c35-13b1ab6fe8e8"
-    },
-    {
-      "id": "8d2cefac-8e1a-473a-b04d-2714e026b78b",
-      "name": "Arch",
-      "type": "Template",
-      "command": false,
-      "templatePath": "templates/Arch.md",
-      "fileNameFormat": {
-        "enabled": true,
-        "format": "Arch"
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "MeetingNotes/Arch"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": false
-      },
-      "appendLink": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": true,
-      "openFileInMode": "default",
-      "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": true
     }
   ],
   "macros": [

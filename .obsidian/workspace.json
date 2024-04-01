@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "87d4042d0d886c8d",
+        "id": "bce6badc96b5e2b7",
         "type": "tabs",
         "children": [
           {
-            "id": "887a08e41d1b89c7",
+            "id": "369affa77e59ef9d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -149,7 +149,7 @@
       "cmdr:QuickAdd: Run QuickAdd": false
     }
   },
-  "active": "887a08e41d1b89c7",
+  "active": "369affa77e59ef9d",
   "lastOpenFiles": [
   ]
 }
