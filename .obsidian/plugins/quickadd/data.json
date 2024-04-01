@@ -61,7 +61,7 @@
           "name": "Creator121",
           "type": "UserScript",
           "id": "465b5b3a-293c-4069-a173-edc7cfd75d49",
-          "path": "Scripts/user/Creator121.js",
+          "path": "Scripts/core/Creator121.js",
           "settings": {}
         }
       ],
@@ -75,7 +75,7 @@
           "name": "RegularMeetingCreator",
           "type": "UserScript",
           "id": "c85234bc-2f57-4394-8c1c-79f8ef84ba0f",
-          "path": "Scripts/user/RegularMeetingCreator.js",
+          "path": "Scripts/core/RegularMeetingCreator.js",
           "settings": {}
         }
       ],
@@ -89,7 +89,7 @@
           "name": "people_card",
           "type": "UserScript",
           "id": "dee6a3a4-bf09-4130-a08b-a9cb1441b08c",
-          "path": "Scripts/user/people_card.js",
+          "path": "Scripts/core/people_card.js",
           "settings": {}
         }
       ],
