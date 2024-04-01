@@ -1,0 +1,186 @@
+{
+  "choices": [
+    {
+      "id": "48ee207b-fbc9-49c0-80ec-95433cab0e99",
+      "name": "Create 121",
+      "type": "Macro",
+      "command": false,
+      "macroId": "19eeef8a-4f48-4302-a40c-924c95ac4957"
+    },
+    {
+      "id": "f52e1b38-1e26-476e-b59a-f1337976e4c5",
+      "name": "Interview",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/core/Interview.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "MeetingNotes/Interviews"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "5ac4d329-93b5-4adf-b09c-bd885dce32d4",
+      "name": "Create people card",
+      "type": "Macro",
+      "command": false,
+      "macroId": "5aa923f5-a009-4ef5-ada3-f8b22e3167c0"
+    },
+    {
+      "id": "79733ce4-a39e-423d-a473-2d579f3c6268",
+      "name": "Create template for regular meeting",
+      "type": "Macro",
+      "command": false,
+      "macroId": "d6553cdb-9378-4c06-8c35-13b1ab6fe8e8"
+    },
+    {
+      "id": "8d2cefac-8e1a-473a-b04d-2714e026b78b",
+      "name": "Arch",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/Arch.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "Arch"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "MeetingNotes/Arch"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": true
+    }
+  ],
+  "macros": [
+    {
+      "name": "121",
+      "id": "19eeef8a-4f48-4302-a40c-924c95ac4957",
+      "commands": [
+        {
+          "name": "Creator121",
+          "type": "UserScript",
+          "id": "465b5b3a-293c-4069-a173-edc7cfd75d49",
+          "path": "Scripts/user/Creator121.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "RegularMeeting",
+      "id": "d6553cdb-9378-4c06-8c35-13b1ab6fe8e8",
+      "commands": [
+        {
+          "name": "RegularMeetingCreator",
+          "type": "UserScript",
+          "id": "c85234bc-2f57-4394-8c1c-79f8ef84ba0f",
+          "path": "Scripts/user/RegularMeetingCreator.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create people card",
+      "id": "5aa923f5-a009-4ef5-ada3-f8b22e3167c0",
+      "commands": [
+        {
+          "name": "people_card",
+          "type": "UserScript",
+          "id": "dee6a3a4-bf09-4130-a08b-a9cb1441b08c",
+          "path": "Scripts/user/people_card.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "templates",
+  "announceUpdates": false,
+  "version": "1.8.1",
+  "disableOnlineFeatures": true,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          }
+        ]
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
+  }
+}

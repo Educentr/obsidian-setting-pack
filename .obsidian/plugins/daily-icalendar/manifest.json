@@ -1,0 +1,10 @@
+{
+	"id": "daily-icalendar",
+	"name": "Daily ICalendar",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "View calendar events in daily notes.",
+	"author": "mmmykhailo",
+	"authorUrl": "https://github.com/mmmykhailo",
+	"isDesktopOnly": true
+}

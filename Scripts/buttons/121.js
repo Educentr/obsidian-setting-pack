@@ -1,0 +1,1 @@
+app.plugins.plugins['templater-obsidian'].templater.current_functions_object.user.Creator121(this.context.file.basename)
