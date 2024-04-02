@@ -33,11 +33,18 @@ Main button
 
 ### Create people card
 
-You can create 
+You have 2 ways to create new people card:
+
+- Create from main menu ![Main menu](.docs/create-new-people.png)
+- Create while selecting people for meeting ![New person](.docs/create-new-people2.png)
 
 ### Create template for regular meetings
 
+If you have regular meetings in your agenda, you can create template for this meetings and collect data and task in separate folder
+
 ### Create meeting motes for regular meeting
+
+If you have templates for regular meetings you can create meeting notes from main menu
 
 ## How you can improve this pack
 
