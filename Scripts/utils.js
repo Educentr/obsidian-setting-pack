@@ -1,5 +1,6 @@
 const newPersonStr = "New person"
 const stopWordStr = "Done";
+const userTemplatesPath = "templates/user/";
 
 function join(...partSegments) {
     // Split the inputs into a list of path commands.
@@ -56,7 +57,7 @@ function createQuickAddTemplateChoice(name) {
         type: "Template",
         command: false,
 
-        templatePath: "templates/" + name + ".md",
+        templatePath: userTemplatesPath + name + ".md",
         fileNameFormat: { enabled: true, format: name },
         folder: {
             enabled: true,
@@ -151,5 +152,6 @@ module.exports = {
     getTP: getTP,
     peopleSuggester: peopleSuggester,
     peoplesSuggester: peoplesSuggester,
+    userTemplatesPath: userTemplatesPath,
     createPeopleCard: createPeopleCard
 }

@@ -1,4 +1,4 @@
-const {createQuickAddTemplateChoice, peoplesSuggester, getTP} = require(app.vault.adapter.basePath + "/Scripts/utils.js")
+const {createQuickAddTemplateChoice, peoplesSuggester, getTP, userTemplatesPath} = require(app.vault.adapter.basePath + "/Scripts/utils.js")
 
 async function create_regular_tmpl() {
     const tp = getTP();
@@ -9,7 +9,7 @@ async function create_regular_tmpl() {
 
     const fileTemplate = tp.file.find_tfile("core/RegularMeeting");
     const contentTemplate = await app.vault.read(fileTemplate);
-    const newTemplate = "templates/user/" + name
+    const newTemplate = userTemplatesPath + name
     s = contentTemplate.replace(/__PEOPLES__/g, peoples.map((item) => `  - "[[${item}]]"`).join("\n")).replace(/__PEOPLES_HEADER__/g, peoples.map((item) => `# [[${item}]]:`).join("\n")).replace(/__TAG__/g, tag_name);
     tp.file.create_new(s, newTemplate, true);
     app.plugins.plugins['quickadd'].settings.choices.push(createQuickAddTemplateChoice(name));
