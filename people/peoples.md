@@ -60,9 +60,6 @@ columns:
       - { label: "Developer", value: "Developer", color: "hsl(282, 95%, 90%)"}
       - { label: "Python", value: "Python", color: "hsl(210, 95%, 90%)"}
       - { label: "CMO", value: "CMO", color: "hsl(192, 95%, 90%)"}
-      - { label: "Technical adviser", value: "Technical adviser", color: "hsl(110, 95%, 90%)"}
-      - { label: "Infrastructuture adviser", value: "Infrastructuture adviser", color: "hsl(243, 95%, 90%)"}
-      - { label: "PMO", value: "PMO", color: "hsl(143, 95%, 90%)"}
     config:
       enable_media_view: true
       link_alias_enabled: true
@@ -153,7 +150,6 @@ columns:
       - { label: "Product development", value: "Product development", color: "hsl(85, 95%, 90%)"}
       - { label: "iOS", value: "iOS", color: "hsl(72, 95%, 90%)"}
       - { label: "C-level", value: "C-level", color: "hsl(218, 95%, 90%)"}
-      - { label: "C level", value: "C level", color: "hsl(33, 95%, 90%)"}
     config:
       enable_media_view: true
       link_alias_enabled: true
