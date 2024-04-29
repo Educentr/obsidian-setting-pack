@@ -14,5 +14,6 @@
   "templater-obsidian",
   "obsidian-meta-bind-plugin",
   "js-engine",
-  "drawio-obsidian"
+  "drawio-obsidian",
+  "obsidian-tasks-plugin"
 ]
