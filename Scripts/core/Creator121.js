@@ -10,6 +10,10 @@ async function create_121(param) {
         name = await peopleSuggester(tp);
     }
 
+    if (name == null) {
+        return
+    }
+
     const ttp = tp.file.find_tfile("core/121");
     const fttp = await app.vault.read(ttp);
     const note121name = "MeetingNotes/121/" + name + "-" + tp.date.now("YYYY-MM-DD")

@@ -57,7 +57,7 @@ function createQuickAddTemplateChoice(name) {
         type: "Template",
         command: false,
 
-        templatePath: userTemplatesPath + name + ".md",
+        templatePath: userTemplatesPath + name + "-{{date}}.md",
         fileNameFormat: { enabled: true, format: name },
         folder: {
             enabled: true,
