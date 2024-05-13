@@ -21,14 +21,14 @@ group by file.name
 ```dataview
 task
 FROM "MeetingNotes" or "Daily Notes"
-WHERE !completed and date(file.name) < date(this.file.name) and (due <= date(this.file.name) or (due = nil)) and contains(text, "#daily")
+WHERE !completed and date(file.name) < date(this.file.name) and (scheduled <= date(this.file.name) or (scheduled = nil)) and contains(text, "#daily")
 group by meta(section).path + " (" + meta(section).subpath + ")"
 ```
 # Tasks for today
 ```dataviewjs
 const tasks = await dv.query(`task
 FROM "MeetingNotes" or "Daily Notes"
-WHERE !completed and date(file.name) < date(this.file.name) and (due <= date(this.file.name) or (due = nil))
+WHERE !completed and date(file.name) < date(this.file.name) and (scheduled <= date(this.file.name) or (scheduled = nil))
 group by meta(section).path + " (" + meta(section).subpath + ")"`);
 
 if (tasks.value && tasks.value.values && tasks.value.values.length > 0) {
@@ -40,7 +40,7 @@ if (tasks.value && tasks.value.values && tasks.value.values.length > 0) {
 ```dataview
 task
 FROM "MeetingNotes" or "Daily Notes"
-WHERE !completed and date(file.name) < date(this.file.name) and (due <= date(this.file.name) or (due = nil))
+WHERE !completed and date(file.name) < date(this.file.name) and (scheduled <= date(this.file.name) or (scheduled = nil))
 group by meta(section).path + " (" + meta(section).subpath + ")"
 ```
 # Tasks that appeared during the day
