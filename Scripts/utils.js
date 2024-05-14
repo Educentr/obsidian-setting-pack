@@ -57,8 +57,8 @@ function createQuickAddTemplateChoice(name) {
         type: "Template",
         command: false,
 
-        templatePath: userTemplatesPath + name + "-{{date}}.md",
-        fileNameFormat: { enabled: true, format: name },
+        templatePath: userTemplatesPath + name + ".md",
+        fileNameFormat: { enabled: true, format: name + "-{{date}}" },
         folder: {
             enabled: true,
             folders: ['MeetingNotes/' + name],
