@@ -6,8 +6,8 @@ Fix block news in 121 template
 
 Migrate helper
 ```
-find ./MeetingNotes/121/ -not -regex '.*\.obsidian.*' -name '*.md' -exec sed -z -i -e 's/and (\s\+contains(join(people), "` + 
-name + `")\s\+or contains(meta(section).subpath, "` + name + `")\s\+)\s\+//' {} \;
+find ./MeetingNotes/121/ -not -regex '.*\.obsidian.*' -name '*.md' -exec perl -e 'open($in, "<", $ARGV[0])||die $!; $_=join("", <$in>);close($in); s/and \(\s+contains\(join\(people\), "` \+ name \+ `"\)\s+or contains\(meta\(section\).subpath, "` \+ name \+ `"\)\s+\)\s+//s; s/console\.log\(tsks\);\s+//s; open($out, ">", $AR
+GV[0])||die $!; printf $out $_; close($out)' {} \;
 ```
 
 ## [0.0.2](https://github.com/Nikolo/obsidian-setting-pack/releases/tag/v0.0.2) (2024-05-13)
@@ -16,7 +16,7 @@ name + `")\s\+or contains(meta(section).subpath, "` + name + `")\s\+)\s\+//' {} 
 
 Moved from due date to schedule data
 
-Migrate halper
+Migrate helper
 
 ```
 find ./ -not -regex '.*\.obsidian.*' -name '*.md' -exec sed -i -e "s/due/scheduled/" {} \;
