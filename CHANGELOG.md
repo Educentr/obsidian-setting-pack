@@ -1,13 +1,23 @@
 # Changelog
 
+## [0.0.6](https://github.com/Nikolo/obsidian-setting-pack/releases/tag/v0.0.6) (2024-05-21)
+
+Fix problem with rerendering news block in 121's
+
+Migration helper
+
+```bash
+find ./MeetingNotes/121/ -name '*.md' -exec perl -e 'open($template, "<", "templates/core/121.md")||die $!; $_=join("", <$template>);close($template); /News(.*)\s#\sTasks from/s; $newjs=$1; open($in, "<", $ARGV[0])||die $!; $_=join("", <$in>);close($in); s/(News)\s+.*(#\s+Tasks from)/$1$newjs\n$2/s || die; open($out, ">", $ARGV[0])||die $!; printf $out $_; close($out)'  {} \;
+```
+
 ## [0.0.5](https://github.com/Nikolo/obsidian-setting-pack/releases/tag/v0.0.5) (2024-05-14)  
 
 Fix block news
 
-Migration halper
+Migration helper
 
 ```bash
-find ./MeetingNotes/121/ -not -regex '.*\.obsidian.*' -name '*.md' -exec sed -i -e 's/"# Tasks done from:/"## Tasks done from:/' {} \;
+find ./MeetingNotes/121/ -name '*.md' -exec sed -i -e 's/"# Tasks done from:/"## Tasks done from:/' {} \;
 ```
 
 ## [0.0.4](https://github.com/Nikolo/obsidian-setting-pack/releases/tag/v0.0.4) (2024-05-14) 
@@ -15,8 +25,7 @@ find ./MeetingNotes/121/ -not -regex '.*\.obsidian.*' -name '*.md' -exec sed -i 
 Migration halper (v0.0.3) for BSD-like systems.
 
 ```bash
-find ./MeetingNotes/121/ -not -regex '.*\.obsidian.*' -name '*.md' -exec perl -e 'open($in, "<", $ARGV[0])||die $!; $_=join("", <$in>);close($in); s/and \(\s+contains\(join\(people\), "` \+ name \+ `"\)\s+or contains\(meta\(section\).subpath, "` \+ name \+ `"\)\s+\)\s+//s; s/console\.log\(tsks\);\s+//s; open($out, ">", $AR
-GV[0])||die $!; printf $out $_; close($out)' {} \;
+find ./MeetingNotes/121/ -name '*.md' -exec perl -e 'open($in, "<", $ARGV[0])||die $!; $_=join("", <$in>);close($in); s/and \(\s+contains\(join\(people\), "` \+ name \+ `"\)\s+or contains\(meta\(section\).subpath, "` \+ name \+ `"\)\s+\)\s+//s; s/console\.log\(tsks\);\s+//s; open($out, ">", $ARGV[0])||die $!; printf $out $_; close($out)' {} \;
 ```
 
 ## [0.0.3](https://github.com/Nikolo/obsidian-setting-pack/releases/tag/v0.0.3) (2024-05-14) 
@@ -25,7 +34,7 @@ Fix block news in 121 template
 
 Migrate helper
 ```bash
-find ./MeetingNotes/121/ -not -regex '.*\.obsidian.*' -name '*.md' -exec sed -z -i -e 's/and (\s\+contains(join(people), "` + 
+find ./MeetingNotes/121/ -name '*.md' -exec sed -z -i -e 's/and (\s\+contains(join(people), "` + 
 name + `")\s\+or contains(meta(section).subpath, "` + name + `")\s\+)\s\+//' {} \;
 ```
 
