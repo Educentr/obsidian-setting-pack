@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.7](https://github.com/Nikolo/obsidian-setting-pack/releases/tag/v0.0.7) (2024-06-04)
+
+Exclude tasks from current 121
+
+Migration helper
+
+```bash
+find ./MeetingNotes/121/ -name '*.md' -exec sed -i -e 's/and scheduled < this\.date/and scheduled < this.date and date(file.frontmatter.date) < this.date/' {} \;
+```
+
 ## [0.0.6](https://github.com/Nikolo/obsidian-setting-pack/releases/tag/v0.0.6) (2024-05-21)
 
 Fix problem with rerendering news block in 121's
